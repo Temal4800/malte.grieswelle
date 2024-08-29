@@ -34,6 +34,7 @@ window.addEventListener('DOMContentLoaded', event => {
     const aboutMeButton = document.querySelector('.btn-primary[href="#about"]');
     const projectsLink = document.querySelector('a[href="#projects"]');
     const cvLink = document.querySelector('a[href="#cv"]');
+    const contactLink = document.querySelector('a[href="#contact"]');
 
     function scrollToSection(event, sectionId) {
         event.preventDefault();

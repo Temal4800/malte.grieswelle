@@ -25,11 +25,11 @@ window.addEventListener('DOMContentLoaded', event => {
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
             target: '#mainNav',
-            rootMargin: '0px 0px -50%',
+            offset: 50, // Adjust this value as needed
         });
     };
 
-    // Add custom scroll behavior for About, About Me, and Projects links
+    // Add custom scroll behavior for About, About Me, Projects, CV, and Contact links
     const aboutLink = document.querySelector('a[href="#about"]');
     const aboutMeButton = document.querySelector('.btn-primary[href="#about"]');
     const projectsLink = document.querySelector('a[href="#projects"]');
@@ -58,6 +58,9 @@ window.addEventListener('DOMContentLoaded', event => {
     }
     if (cvLink) {
         cvLink.addEventListener('click', (e) => scrollToSection(e, '#cv'));
+    }
+    if (contactLink) {
+        contactLink.addEventListener('click', (e) => scrollToSection(e, '#contact'));
     }
 
     // Collapse responsive navbar when toggler is visible
